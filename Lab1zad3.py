@@ -1,14 +1,8 @@
-q= int(input("Podaj liczbę q: "))
-p = int(input("Podaj liczbę wyszukiwaną: "))
-A = [int(input("Podaj liczbę: ")) for i in range(q)]
-l = 0
-while l < q:
-    if A[l]==p:
-        print("Liczba wyszukiwana występuje w liście")
-        break
-    else:
-        l += 1
-        continue
+liczby = [1,2,3,4,5,6,7,8,9,10]
+liczba = int(input("Podaj wartość:"))
+
+if liczba in liczby:
+    print(f"Wartość {liczba} występuje w tablicy.")
 else:
-    print("Liczba wyszukiwana nie występuje w liście")
+    print(f"Wartość {liczba} nie występuje w tablicy.")
 
