@@ -1,11 +1,11 @@
-q = int(input("Podaj  liczbę q: "))
-p = [int(input("Podaj liczbę: ")) for i in range(q)]
+n = int(input("Podaj liczbę n: "))
+ilosc_ujemnych = 0
+liczby = []
 i = 0
-ile_u = 0
-for i in p:
-    if i < 0:
-        ile_u += 1
-        i += 1
-    else:
-        i += 1
-print(f"Ilość ujemnych liczb  będę: {ile_u}")
+while i < n:
+    liczba= int(input(f"Podaj {i+1}. liczbę: "))
+    liczby.append(liczba)
+    if liczba< 0:
+        ilosc_ujemnych += 1
+    i+=1
+print(f"Ilość liczb ujemnych w ciągu wynosi: {ilosc_ujemnych}")
