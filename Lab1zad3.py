@@ -1,12 +1,8 @@
-n = int(input("Podaj liczbę n: "))
-ilosc_ujemnych = 0
-liczby = []
-i = 0
-while i < n:
-    liczba= int(input(f"Podaj {i+1}. liczbę: "))
-    liczby.append(liczba)
-    if liczba< 0:
-        ilosc_ujemnych += 1
-    i+=1
-print(f"Ilość liczb ujemnych w ciągu wynosi: {ilosc_ujemnych}")
+liczby = [1,2,3,4,5,6,7,8,9,10]
+liczba = int(input("Podaj wartość:"))
+
+if liczba in liczby:
+    print(f"Wartość {liczba} występuje w tablicy.")
+else:
+    print(f"Wartość {liczba} nie występuje w tablicy.")
 
