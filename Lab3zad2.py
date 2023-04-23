@@ -1,12 +1,15 @@
-a=int(input("Podaj a: "))
-b=int(input("Podaj b :"))
+a=int(input("Podaj a : "))
+b=int(input("Podaj b : "))
+if b==0:
+    print("NWD jest: ",a)
 
-while a !=b:
-    if a>b:
-        a=a-b 
-        continue
-    elif b>a:
-        b=b-a 
-        continue
+elif a < 0 or b < 0:
+    print("Nie może tak być! ")
+
 else:
-    print(a)
+
+    while b>0:
+        reszta = a%b
+        a=b
+        b=reszta
+    print("NWD jest: ",a )
