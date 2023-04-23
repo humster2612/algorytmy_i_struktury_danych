@@ -1,6 +1,6 @@
 numbers = [1, 2, 3, 11, 21, 111, 231]
 
-def lexic_sort(numbers):
+def lexicographic_sort(numbers):
     sorted_numbers = []
     while len(numbers) > 0:
         smallest = min(numbers)
@@ -9,4 +9,4 @@ def lexic_sort(numbers):
 
     return sorted_numbers
 
-print(lexic_sort(numbers))
+print(lexicographic_sort(numbers))
