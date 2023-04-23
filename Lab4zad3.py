@@ -1,18 +1,20 @@
-def g(wektor,p,q):
-    if p==q:
-        return wektor[p]
-    elif (p+1)==q:
-        return max(wektor[p],wektor[q])
+def max_element(vec):
+    n = len(vec)
+    if n == 1:
+        return vec[0]
+    elif n == 2:
+        if vec[0] > vec[1]:
+            return vec[0]
+        else:
+            return vec[1]
     else:
-        mid = (p + q) // 2
-        max1 = g(wektor, p, mid)
-        max2 = g(wektor, mid+1, q)
-        return max(max1, max2)
-
-wektor = []
-liczby = int(input("Podaj ilość liczb: "))
-for i in range(liczby):
-    a = int(input("Podaj: "))
-    wektor.append(a)
-g(wektor, 0, liczby - 1)
-print(g(wektor, 0, liczby - 1))
+        mid = n // 2    
+        max1 = max_element(vec[:mid])
+        max2 = max_element(vec[mid:])
+        if max1 > max2:
+            return max1
+        else:
+            return max2
+vec = [2,4,5]
+max_num = max_element(vec)
+print(max_num)
