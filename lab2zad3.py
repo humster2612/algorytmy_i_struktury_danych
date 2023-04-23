@@ -1,13 +1,12 @@
-liczby=[1,2,3,4,15,28,110,256,1]
-p=[]
+numbers = [1, 2, 3, 11, 21, 111, 231]
 
-while liczby:
-    p.append(str(liczby.pop()))
+def lexic_sort(numbers):
+    sorted_numbers = []
+    while len(numbers) > 0:
+        smallest = min(numbers)
+        sorted_numbers.append(smallest)
+        numbers.remove(smallest)
 
-    p.sort(reverse=True)
+    return sorted_numbers
 
-
-while p:
-    liczby.append(int(p.pop()))
-
-print(liczby)
+print(lexic_sort(numbers))
