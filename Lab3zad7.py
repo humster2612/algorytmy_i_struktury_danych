@@ -1,11 +1,8 @@
-def w_binarnu(liczba):
-    if liczba ==0:
-        return "0"
-    
+def zad5(n, A, B, C):
+    if n == 1:
+        print(f"Przenies krążek z {A} na {C}")
     else:
-        reszta=liczba%2
-        wynik=w_binarnu(liczba//2)
-        return wynik+str(reszta)
-    
-liczba=int(input("Podaj liczbę dziesietna:"))
-print(w_binarnu(liczba))
+        zad5(n-1, A, C, B)
+        print(f"Przenies krążek z {A} na {C}")
+        zad5(n-1, B, A, C)
+zad5(int(input('podaj ilość krążek:')), 'A', 'B', 'C')
