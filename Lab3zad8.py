@@ -1,8 +1,7 @@
 def f(n):
-    if(n==0):
+    if n == 1:
         return 4
     else:
-        return 1/(1-f(n-1))
-    
-n=int(input("Wpisz n:"))
-print(f(n))
+        return 1 / (1 - f(n-1))
+for n in range(1, 101):
+    print(f"f({n}) = {f(n)}")
