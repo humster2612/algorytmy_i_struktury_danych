@@ -1,15 +1,7 @@
-a=int(input("Podaj a : "))
-b=int(input("Podaj b : "))
-if b==0:
-    print("NWD jest: ",a)
-
-elif a < 0 or b < 0:
-    print("Nie może tak być! ")
-
-else:
-
-    while b>0:
-        reszta = a%b
-        a=b
-        b=reszta
-    print("NWD jest: ",a )
+def wynik(i):
+    if i < 3:
+        return 1
+    elif i % 2 == 0:
+        return wynik(i-3) + wynik(i-1) + 1
+    else:
+        return wynik(i-1) % 7
