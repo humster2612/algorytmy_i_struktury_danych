@@ -1,19 +1,16 @@
-def fiban(n):
-    if n == 0:
+def get(n):
+    if n==0:
         return 0
-    elif n == 1:
+    elif n==1:
         return 1
+    elif n>1:
+        t=[0,1]
+        i=2
+        while(i<=n):
+            t.append(t[i-1]+t[i-2])
+            i+=1
+        return t[i-1]
     else:
-        F = [0, 1]
-        i = 2
-        while i <= n:
-            F.append(F[i-1]+F[i-2])
-            i += 1
-        return F[i-1]
-
-
-n = int(input("Podaj n: "))
-if n >= 0:
-    print(fiban(n))
-else:
-    print("To jest zły argument")
+        print("podanie zle dane")
+n=int(input("podaj n "))
+print(get(n))
