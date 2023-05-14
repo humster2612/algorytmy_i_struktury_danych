@@ -1,17 +1,21 @@
-def parChecker(symbolString):
+def kod(symbStr):
     s = Stack()
+    
     balanced = True
-    index = 0
-    while index < len(symbolString) and balanced:
-        symbol = symbolString[index]
+    ind = 0
+    while ind < len(symbStr) and balanced:
+        
+        symbol = symbStr[ind]
         if symbol in '({[<':
             s.push(symbol)
         else:
+            
             if s.isEmpty():
                 balanced = False
             else:
+                
                 s.pop()
-        index += 1
+        ind += 1
     if balanced and s.isEmpty():
         return True
     else:
