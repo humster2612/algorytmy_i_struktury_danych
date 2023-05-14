@@ -1,4 +1,4 @@
-def kod(num):
+def ziemniaczka(num):
     register = Queue()
     ludzi= ["Oleg", "Matwij", "Kola", "Ania", "Olha", "Misza"]
     for lud in ludzi:
